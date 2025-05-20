@@ -55,7 +55,7 @@ public class AntrianLayanan09 {
         }
         public void tambahAntrian09 (Mahasiswa09 mhs) {
             if (isFull()) {
-                System.out.println("ANtrian penuh, tidak dapat menambah mahasiswa");
+                System.out.println("Antrian penuh, tidak dapat menambah mahasiswa");
                 return;
             } 
             rear = (rear + 1) % max;
@@ -77,6 +77,15 @@ public class AntrianLayanan09 {
         }
         public int getJumlahAntrian() {
             return size;
+        }
+        public void lihatAkhir () {
+            if (isFull()) {
+                System.out.println("Antrian penuh. ");
+            } else {
+                System.out.print("Mahasiswa terbelakang: "); 
+                System.out.println("NIM - NAMA - PRODI - KELAS");
+                data[rear].tampilkanData();
+            }
         }
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
     }
